@@ -1,1 +1,36 @@
 $default-page-width: 1140px
+$mobile-cutoff-point: 800px
+$desktop-starting-point: $mobile-cutoff-point + 1
+
+=screen-mobile
+  @media screen and (max-width: $mobile-cutoff-point)
+    @content
+
+=screen-mobile-portrait
+  @media screen and (max-width: $mobile-cutoff-point) and (orientation: portrait)
+    @content
+
+=screen-mobile-landscape
+  @media screen and (max-width: $mobile-cutoff-point) and (orientation: landscape)
+    @content
+
+=screen-desktop
+  @media screen and (min-width: $desktop-starting-point)
+    @content
+
+=screen-landscape
+  @media all and (orientation:landscape)
+    @content
+
+=screen-portrait
+  @media all and (orientation:portrait)
+    @content
+
+=maximilius-widthimus
+  +screen-desktop
+    width: $default-page-width
+    max-width: 100%
+
+  +screen-mobile
+    padding-left: 10px
+    padding-right: 10px
