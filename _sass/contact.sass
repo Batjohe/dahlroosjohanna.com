@@ -1,8 +1,11 @@
 @import "variables"
 
 .holler-at-me
-  @media screen and (min-height: 800px)
+  @media screen and (min-height: 500px)
     padding-top: 140px
 
   h1
     text-align: center
+
+    +screen-mobile
+      font-size: 5vw

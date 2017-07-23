@@ -8,21 +8,31 @@ $margin: $remainder / 2
 .boxies
   font-size: 0
 
+  +screen-mobile
+    text-align: center
+
   &__box
     display: inline-block
     vertical-align: top
     position: relative
     overflow: hidden
     cursor: pointer
+    margin-bottom: $margin
+    
+    img
+      max-width: 100%
+      height: auto
 
-    &:hover
+    &:hover, &:focus
       .boxies__box__textietext
         bottom: 0
     
+    +screen-mobile
+      max-width: 100%
+
     +screen-desktop
       width: $image-width
       margin-right: $margin
-      margin-bottom: $margin
 
       &:nth-child(3)
         margin-right: 0
@@ -32,11 +42,17 @@ $margin: $remainder / 2
       text-align: center
       position: absolute
       transition: bottom .4s
-      bottom: -200px
       left: 0
       right: 0
+      bottom: 0
       font-size: 16px
       padding: 10px
       color: white
       line-height: 1.3
       background-color: rgba(0,0,0,0.3)
+
+      @media (pointer:fine)
+        bottom: -200px
+
+      @media (pointer:course)
+        bottom: 0 !important
