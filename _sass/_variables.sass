@@ -28,9 +28,11 @@ $header-height: 118px
   @media all and (orientation:portrait)
     @content
 
-=maximilius-widthimus
+=maximilius-widthimus($width...)
+  $dat-width: if(length($width) == 0, $default-page-width, $width)
+
   +screen-desktop
-    width: $default-page-width
+    width: $dat-width
     max-width: 100%
 
   +screen-mobile
