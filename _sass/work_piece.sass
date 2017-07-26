@@ -1,9 +1,14 @@
 @import "variables"
 
+* 
+  margin: 0
+  padding: 0
+
+
 .layout-work-piece
   +maximilius-widthimus(900px)
   margin: 0 auto
-  padding-bottom: 40px
+  padding-bottom: 20px
 
 
   h1
@@ -26,6 +31,11 @@
     img
       max-width: 100%
       height: auto
+
+  .take-me-back-baby
+    padding: 20px 0
+    font-size: 18px
+    text-align: center
 
 .work-piece
   &__group
@@ -67,6 +77,9 @@
     display: flex
     justify-content: space-between
     font-size: 0
+
+    &__piece:first-of-type  
+      margin-right: 20px
 
 
 .shadow-me-bitch
