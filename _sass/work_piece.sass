@@ -49,5 +49,25 @@
           margin-top: 20px
 
 
+.two-piece
+  margin-bottom: 28px
+
+  img
+    max-width: 100%
+    height: auto
+
+  +screen-mobile
+    text-align: center
+    
+    img:first-child
+      margin-bottom: 28px
+    
+
+  +screen-desktop
+    display: flex
+    justify-content: space-between
+    font-size: 0
+
+
 .shadow-me-bitch
   box-shadow: 4px 9px 75px rgba(0,0,0,0.22)
