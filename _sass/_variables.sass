@@ -16,8 +16,10 @@ $header-height: 118px
   @media screen and (max-width: $mobile-cutoff-point) and (orientation: landscape)
     @content
 
-=screen-desktop
-  @media screen and (min-width: $desktop-starting-point)
+=screen-desktop($cutoff...)
+  $dat-width: if(length($cutoff) == 0, $default-page-width, $cutoff)
+
+  @media screen and (min-width: $dat-width)
     @content
 
 =screen-landscape
@@ -31,7 +33,7 @@ $header-height: 118px
 =maximilius-widthimus($width...)
   $dat-width: if(length($width) == 0, $default-page-width, $width)
 
-  +screen-desktop
+  +screen-desktop($dat-width)
     width: $dat-width
     max-width: 100%
 
