@@ -1,11 +1,16 @@
 @import "variables"
 
 .holler-at-me
+  display: flex
+  flex-direction: column
+  align-items: center
+
   @media screen and (min-height: 500px)
-    padding-top: 140px
+    padding-top: 40px
 
+  img
+    margin-bottom: 40px
   h1
-    text-align: center
-
+    font-size: 56px
     +screen-mobile
       font-size: 5vw
