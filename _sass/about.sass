@@ -96,7 +96,6 @@
         flex-direction: column
 
   .featured
-
     &__part
       margin-bottom: 56px
 
@@ -111,9 +110,18 @@
         display: flex
         flex-direction: row
         flex-wrap: wrap
-        justify-content: space-between
 
       &__part
         box-sizing: border-box
-        width: 300px
+        width: 33.3333333%
+        
+        > *
+          width: 300px
+          display: block
+          
+        // that's one dirty sanchez
+        &:nth-of-type(3n+2), &:nth-of-type(3n+3)
+          
+          > *
+            margin: 0 auto
         
