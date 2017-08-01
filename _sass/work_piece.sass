@@ -10,16 +10,55 @@
   margin: 0 auto
   padding-bottom: 20px
 
+  .that-box-thing
+    &__left
+      margin-bottom: 20px
 
-  h1
-    text-align: center
-    margin-bottom: 3rem
+      &__top
+        font-size: 35px
+        margin-bottom: 10px
+
+
+      &__bottom
+        display: flex
+        flex-direction: column
+        
+
+        span
+          display: block
+
+          &:first-of-type
+            margin-bottom: 10px
+
+        strong
+          font-weight: 700
+        
+
+    +screen-desktop
+      display: flex
+      justify-content: space-between
+      margin-bottom: 50px
+
+      &__left
+        max-width: 220px
+        display: flex
+        flex-direction: column
+        margin-bottom: 0
+
+        &__top
+          margin-bottom: 30px
+          line-height: 1.45
+
+      &__right
+        max-width: 575px
+        margin-bottom: 0
+        padding-top: 10px
 
   p
     margin-bottom: 40px
     font-size: 16px
-    letter-spacing: 0.5px
-    line-height: 1.6
+    letter-spacing: 0.2px
+    line-height: 1.9
     color: #525252
 
   figure
