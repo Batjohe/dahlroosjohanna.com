@@ -1,21 +1,9 @@
 .home
   $margin-bottom-yo: 80px
 
-  .full-screen-yo
-    min-height: 100%
-    min-height: calc(100vh)
-    min-height: calc(100vh - 118px - #{$margin-bottom-yo})
-    margin-bottom: $margin-bottom-yo
-
-    @media screen and (min-height: 1120px)
-      max-height: 960px
-
-  section:not(.full-screen-yo)
+  section
     margin-bottom: $margin-bottom-yo
     margin-bottom: calc(100vh - calc(100vh - 118px - #{$margin-bottom-yo}))
-
-    > h1:first-of-type
-      margin-bottom: 20px
     
   .that-little-thing
     margin: 70px 0
