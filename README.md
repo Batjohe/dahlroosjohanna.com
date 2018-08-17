@@ -2,7 +2,7 @@
 
 ```
 cd ~/code/johannadahlroos.com
-jekyll serve
+bundle exec jekyll serve
 ```
 
 - git status
